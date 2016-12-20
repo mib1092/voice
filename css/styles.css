@@ -2,7 +2,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:14px "Open Sans", Arial, sans-serif; background:#fff; color:#000; }
+body                            { padding:0; margin:0; font:14px "Open Sans", Arial, Helvetica, sans-serif; background:#fff; color:#333; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
 	padding:0;
 	margin:0;
@@ -12,11 +12,11 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
 select, input, textarea        { font-size:14px; vertical-align:middle; }
 textarea                       { vertical-align:top; }
 :focus                         { outline:none; }
-input[type=submit]             { cursor:pointer; }
+input[type=submit], button     { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:14px "Open Sans", Arial, sans-serif; color:#000; text-decoration:underline; }
-a:hover                        { text-decoration:none; }
+a:link, a:visited              { font:14px "Open Sans", Arial, Helvetica, sans-serif; color:#333; text-decoration:none; }
+a:hover                        { color:#f47c52; text-decoration:underline; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -41,22 +41,16 @@ a:hover                        { text-decoration:none; }
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-a, .btn {
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
+a, .btn, button {
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
 }
-a:hover,
-.btn:hover,
-input[type="submit"]:hover,
-button:hover {
-    opacity: 0.8;
-}
-.input-style::-webkit-input-placeholder { color: #4f6370; }
-.input-style::-moz-placeholder { color: #4f6370; }
-.input-style:-ms-input-placeholder { color: #4f6370; }
-.input-style:-moz-placeholder { color: #4f6370; }
+.input-style::-webkit-input-placeholder { color: #aaa; }
+.input-style::-moz-placeholder { color: #aaa; }
+.input-style:-ms-input-placeholder { color: #aaa; }
+.input-style:-moz-placeholder { color: #aaa; }
 img {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -64,7 +58,7 @@ img {
     -khtml-user-select: none;
     user-select: none;
 }
-.content-box {
+.container {
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
@@ -76,14 +70,6 @@ img {
 /*----------------------------------------------------------------------------------*/
 .wrapper {
     position: relative;
-    min-height: 100%;
-    margin-bottom: -225px;
-}
-.wrapper:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 225px;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HEADER---------------------------------------*/
