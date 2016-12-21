@@ -13,6 +13,7 @@
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -23,6 +24,10 @@
                     <a href="index.html">
                         <img src="img/logo.png" alt="">
                     </a>
+                </div>
+
+                <div class="mobile-menu-toggle">
+                    <span></span>
                 </div>
 
                 <nav class="navigation">
@@ -47,6 +52,34 @@
                     <div class="tel-content">
                         415-770-7730
                     </div>
+                </div>
+
+                <div class="mobile-menu-wrap">
+                    <nav class="mobile-menu-box">
+
+                        <div class="tel-wrap">
+                            <i class="fa fa-phone-square" aria-hidden="true"></i>
+                            <div class="tel-content">
+                                415-770-7730
+                            </div>
+                        </div>
+
+                        <ul class="mobile-menu">
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#services">Services</a>
+                            </li>
+                            <li>
+                                <a href="#samples">Samples</a>
+                            </li>
+                            <li class="btn-box">
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="mobile-menu-overlay"></div>
                 </div>
             </div>
         </header>
@@ -136,7 +169,21 @@
                     <div class="form-wrap">
                         <h2 class="title">Contact Us</h2>
                         <div class="form-box">
-
+                            <form action="#" method="post" class="wpcf7-form">
+                                <ul class="form-list">
+                                    <li>
+                                        <p class="col col-2"><input type="text" name="name" class="input-style" placeholder="Name"></p>
+                                        <p class="col col-2"><input type="email" name="email" class="input-style" placeholder="Email"></p>
+                                    </li>
+                                    <li>
+                                        <p class="col col-1"><textarea name="msg" class="input-style" placeholder="Your Comment"></textarea></p>
+                                    </li>
+                                    <li>
+                                        <div class="g-recaptcha" data-sitekey="6LeZYg8UAAAAAOR_5sEgUwddN1qK4u7BVfyBGa66"></div>
+                                        <p class="col col-send"><input type="submit" class="btn" value="Send"></p>
+                                    </li>
+                                </ul>
+                            </form>
                         </div>
                     </div>
                     <div class="info-wrap orange-bg">

@@ -1,10 +1,27 @@
 jQuery(document).ready(function($) {
 
     // for header-fixed padding
-    $('.wrapper').css('padding-top', $('#header').outerHeight());
+    $(window).on('load resize', function() {
+        var headerHeight = $('#header').outerHeight();
+        $('.wrapper').css('padding-top', headerHeight);
+        $('.mobile-menu-wrap').css('top', headerHeight);
+    });
 
     $(window).scroll(function(){
         $('#header').toggleClass('scroll-js', $(this).scrollTop() > 0);
+    });
+
+    // for burger menu
+    $(".mobile-menu-toggle, .mobile-menu-overlay, .donate-mobile .donate").on('click', function(){
+        $('.mobile-menu-toggle').toggleClass('active');
+        $('.mobile-menu-wrap').toggleClass('showing');
+        $(document.body).toggleClass('overflow');
+    });
+    $(".mobile-menu a").on('click', function(){
+        $(this).toggleClass('open').siblings('.sub-menu').slideToggle(350);
+    });
+    $(window).on('load', function(){
+        $(".mobile-menu a + .sub-menu").siblings('a').toggleClass('expanded').attr("href", "#");
     });
 
     // for smooth scroll
