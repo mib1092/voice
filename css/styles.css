@@ -213,6 +213,10 @@ img {
             .navigation a:hover {
                 text-decoration: none;
             }
+            .current-menu a {
+                color: #f47c52;
+                text-decoration: none;
+            }
         .navigation ul:not(.sub-menu) li.btn-box {
             padding: 0 0 0 80px;
         }
@@ -483,7 +487,8 @@ img {
                             font-size: 22px;
                             color: #f5b8b0;
                         }
-                        .social-list a:hover {
+                        .social-list a:hover,
+                        .orange-bg .social-list a:hover {
                             text-decoration: none;
                             color: #fff;
                         }
