@@ -70,6 +70,10 @@ img {
 .content-box {
     max-width: 1020px;
 }
+.half-wrap {
+    float: left;
+    width: 50%;
+}
 .title {
     padding-top: 20px;
     margin-bottom: 16px;
@@ -99,6 +103,61 @@ img {
 }
 .description p:last-child {
     margin-bottom: 0;
+}
+
+.orange-bg {
+    color: #fff;
+    background: rgba(234,113,97,1);
+    background: -moz-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(234,113,97,1)), color-stop(100%, rgba(244,125,82,1)));
+    background: -webkit-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
+    background: linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea7161', endColorstr='#f47d52', GradientType=1 );
+}
+    .orange-bg a {
+        color: #fff;
+    }
+    .orange-bg a:not([href^=mailto]):hover {
+        text-decoration: none;
+        color: #c93f46;
+    }
+
+.btn, a.btn, .btn-box a {
+    display: inline-block;
+    min-width: 165px;
+    min-height: 50px;
+    padding: 13px 35px 15px;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    text-transform: none;
+    background: rgba(63,145,245,1);
+    background: -moz-linear-gradient(-45deg, rgba(63,145,245,1) 0%, rgba(154,110,255,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(63,145,245,1)), color-stop(100%, rgba(154,110,255,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(63,145,245,1) 0%, rgba(154,110,255,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(63,145,245,1) 0%, rgba(154,110,255,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(63,145,245,1) 0%, rgba(154,110,255,1) 100%);
+    background: linear-gradient(135deg, rgba(63,145,245,1) 0%, rgba(154,110,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f91f5', endColorstr='#9a6eff', GradientType=1 );
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+.btn:hover, a.btn:hover, .btn-box a:hover {
+    text-decoration: none;
+    background: rgba(234,113,97,1);
+    background: -moz-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(234,113,97,1)), color-stop(100%, rgba(244,125,82,1)));
+    background: -webkit-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
+    background: linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea7161', endColorstr='#f47d52', GradientType=1 );
 }
 
 .wrapper {
@@ -146,7 +205,7 @@ img {
             float: left;
             padding: 14px 20px 16px;
         }
-            .navigation a {
+            .navigation li:not(.btn-box) a {
                 font-size: 15px;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -154,43 +213,9 @@ img {
             .navigation a:hover {
                 text-decoration: none;
             }
-        .navigation ul:not(.sub-menu) .btn-style {
+        .navigation ul:not(.sub-menu) li.btn-box {
             padding: 0 0 0 80px;
         }
-            .btn-style a {
-                display: inline-block;
-                min-width: 165px;
-                padding: 13px 20px 15px;
-                font-size: 18px;
-                line-height: 1.25;
-                font-weight: 700;
-                color: #fff;
-                text-align: center;
-                cursor: pointer;
-                text-transform: none;
-                background: rgba(63,145,245,1);
-                background: -moz-linear-gradient(-45deg, rgba(63,145,245,1) 0%, rgba(154,110,255,1) 100%);
-                background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(63,145,245,1)), color-stop(100%, rgba(154,110,255,1)));
-                background: -webkit-linear-gradient(-45deg, rgba(63,145,245,1) 0%, rgba(154,110,255,1) 100%);
-                background: -o-linear-gradient(-45deg, rgba(63,145,245,1) 0%, rgba(154,110,255,1) 100%);
-                background: -ms-linear-gradient(-45deg, rgba(63,145,245,1) 0%, rgba(154,110,255,1) 100%);
-                background: linear-gradient(135deg, rgba(63,145,245,1) 0%, rgba(154,110,255,1) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f91f5', endColorstr='#9a6eff', GradientType=1 );
-                -webkit-border-radius: 2em;
-                -moz-border-radius: 2em;
-                border-radius: 2em;
-                transition: background 0.5s ease-out 0.5s;
-            }
-            .btn-style a:hover {
-                background: rgba(234,113,97,1);
-                background: -moz-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
-                background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(234,113,97,1)), color-stop(100%, rgba(244,125,82,1)));
-                background: -webkit-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
-                background: -o-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
-                background: -ms-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
-                background: linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea7161', endColorstr='#f47d52', GradientType=1 );
-            }
 
     .tel-wrap {
         overflow: hidden;
@@ -218,15 +243,73 @@ img {
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .banner-section {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    height: -webkit-calc(100vh - 120px);
+    height: -moz-calc(100vh - 120px);
+    height: calc(100vh - 120px);
+    position: relative;
     margin-bottom: 25px;
+    background: #3f3142;
 }
+.admin-bar .banner-section {
+    height: -webkit-calc(100vh - 152px);
+    height: -moz-calc(100vh - 152px);
+    height: calc(100vh - 152px);
+}
+    .banner-img-bg {
+        display: table-cell;
+        float: none;
+        vertical-align: top;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+        .banner-img {
+            display: none;
+        }
+    .samples-wrap {
+        display: table-cell;
+        float: none;
+        vertical-align: top;
+        padding: 60px 70px 180px;
+    }
+        .samples-wrap .title {
+            padding-top: 0;
+            margin-bottom: 6px;
+            font-size: 34px;
+            line-height: 1.25;
+            text-align: left;
+        }
+        .samples-wrap .description {
+            font-size: 18px;
+            line-height: 1.4;
+            text-align: left;
+        }
+    .cta-line {
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 20px;
+        background: url(../img/cta_bg.png) no-repeat center;
+        background-size: cover;
+        text-align: center;
+    }
+        .cta-line .btn {
+            -webkit-box-shadow: 0 0 30px 0 rgba(100, 126, 254, 0.5);
+            -moz-box-shadow: 0 0 30px 0 rgba(100, 126, 254, 0.5);
+            box-shadow: 0 0 30px 0 rgba(100, 126, 254, 0.5);
+        }
 
 .services-section {
-    padding-top: 30px;
+    padding-top: 24px;
     padding-bottom: 30px;
 }
     .services-list {
-        padding-top: 15px;
+        padding-top: 17px;
     }
         .services-list > li {
             overflow: hidden;
@@ -343,19 +426,11 @@ img {
                 line-height: 1.25;
                 text-align: left;
             }
+
         .info-wrap {
             overflow: hidden;
             position: relative;
-            padding: 38px 38px 100px;
-            color: #fff;
-            background: rgba(234,113,97,1);
-            background: -moz-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
-            background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(234,113,97,1)), color-stop(100%, rgba(244,125,82,1)));
-            background: -webkit-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
-            background: -o-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
-            background: -ms-linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
-            background: linear-gradient(45deg, rgba(234,113,97,1) 0%, rgba(244,125,82,1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea7161', endColorstr='#f47d52', GradientType=1 );
+            padding: 38px 30px 100px 38px;
         }
             .info-wrap .sub-title {
                 margin-bottom: 38px;
